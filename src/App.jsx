@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+import TodoList from './TodoList'
 import './App.css';
 
-export default class App extends React.Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -62,7 +63,7 @@ return <div className="container"><h3>Loading</h3></div>
 
     return (
       <div className="container">
-        <h3>Add todo</h3>
+        <h3>Simple todo app</h3>
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleChange} value={this.state.text}/>
           <input type="submit"/>
@@ -70,16 +71,5 @@ return <div className="container"><h3>Loading</h3></div>
         <TodoList todos={todos} delete={this.handleDelete}/>
       </div>
     );
-  }
-}
-
-export class TodoList extends React.Component {
-  render() {
-    return this.props.todos.map((item, i) => (
-      <li key={i}>
-        {item}
-        <button onClick={() => this.props.delete(i)}>Delete</button>
-      </li>
-    ));
   }
 }
