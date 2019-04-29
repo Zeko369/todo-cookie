@@ -3,11 +3,11 @@
 ### Simple react.js todo app example using browser cookies as datastore to keep data between reloads
 
 ## Dev
-`yarn install`
+`yarn install`  
 `yarn start`
 
 ## Prod
-`yarn run build`
+`yarn run build`  
 Host build/ folder with apache/nginx/simpleHTTPServer...
 
 MIT
