@@ -1,11 +1,13 @@
 .container {
   margin: 10px auto;
+  max-width: 400px;
   width: 80%;
   position: relative;
   /* padding-top: 20px; */
   border-radius: 4px;
   box-shadow: 0 2px 4px #aaa;
   padding: 10px;
+  font-size: 24px;
 }
 
 form {
@@ -26,12 +28,12 @@ input, button:focus {
   outline-width: 0;
 }
 input[type="submit"] {
-  width: 64px;
   height: 100%;
   background-color: #007FBB;
 }
 
 input[type="submit"], button {
+  font-size: 20px;
   color: #fff;
   position: relative;
   border-radius: 4px;
@@ -47,8 +49,12 @@ input[type="submit"], button:active {
 
 button.delete {
   background-color: #dc3445;
+  margin-right: 10px;
+  margin-left: 0px;
 }
 
 h3 {
   margin: 0px;
+  font-size: 32px;
 }
+
