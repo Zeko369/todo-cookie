@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoList from './TodoList'
 import './App.css';
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
 
@@ -31,7 +31,6 @@ export default class App extends Component {
     } catch(e) {
       this.setState({loading: false})
     }
-    // setTimeout(() => {this.setState({loading: false})}, 100);
   }
 
   handleChange(e) {
@@ -56,13 +55,14 @@ export default class App extends Component {
 
   render() {
     const { todos, loading } = this.state;
+    const scaled = document.location.href.indexOf('scaled') !== -1;
 
     if(loading) {
-return <div className="container"><h3>Loading</h3></div>
+      return <div className="container"><h3>Loading</h3></div>
     }
 
     return (
-      <div className="container">
+      <div className={`container ${scaled ? 'scaled' : ''}`}>
         <h3>Simple todo app</h3>
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleChange} value={this.state.text}/>
@@ -73,3 +73,5 @@ return <div className="container"><h3>Loading</h3></div>
     );
   }
 }
+
+export default App;

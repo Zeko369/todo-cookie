@@ -10,6 +10,10 @@
   font-size: 24px;
 }
 
+.scaled {
+  transform: scale(2) translateY(30%);
+}
+
 form {
   margin: 10px 0;
   display: flex;
@@ -18,10 +22,11 @@ form {
 input[type="text"] {
   width: 100%;
   max-width: 300px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 0 solid #ddd;
   box-shadow: 0 2px 4px #aaa;
   padding: 4px;
+  font-size: 24px;
 }
 
 input, button:focus {
