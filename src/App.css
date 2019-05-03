@@ -11,7 +11,7 @@
 }
 
 .scaled {
-  transform: scale(2) translateY(30%);
+  transform: scale(2) translateY(92px);
 }
 
 form {
