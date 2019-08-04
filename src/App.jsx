@@ -68,6 +68,9 @@ class App extends Component {
           <input type="text" onChange={this.handleChange} value={this.state.text}/>
           <input type="submit"/>
         </form>
+        {
+          fetch()
+        }
         <TodoList todos={todos} delete={this.handleDelete}/>
       </div>
     );
